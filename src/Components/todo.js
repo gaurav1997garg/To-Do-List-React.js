@@ -2,6 +2,7 @@ import React from 'react';
 import { Title } from './todotitle';
 import { TodoForm } from './todoform';
 import { TodoList } from './todolist';
+import '../Styles/todo.css';
 let globeid=1;
 export class Todo extends React.Component{
     constructor(props){
@@ -24,12 +25,12 @@ export class Todo extends React.Component{
 
     render(){
         return (
-            <div class="outer">
-                <div class="inner1"> < Title /> </div>
-                <div class="inner2">
+            <div className="outer">
+                <div className="inner1"> < Title /> </div>
+                <div className="inner2">
                     <TodoForm addItem={this.addItem}/>
                 </div>
-                <div class="inner3">
+                <div className="inner3">
                     < TodoList removeItem={this.removeItem} itemData={this.state.data}/>
                 </div>
             </div>

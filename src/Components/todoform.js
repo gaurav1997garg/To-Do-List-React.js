@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Styles/todoform.css'
 
 export class TodoForm extends React.Component{
     constructor(props){
@@ -18,8 +19,8 @@ export class TodoForm extends React.Component{
    
     render(){
         return (
-            <div>TASK : 
-                <input type="text" value={this.state.value} onChange={this.handleChange } onKeyPress={this.handleKeyPress}/>
+            <div className="myForm">TASK : 
+                <input type="text" value={this.state.value} onChange={this.handleChange } onKeyPress={this.handleKeyPress}/> <nbsb> </nbsb> 
                 <button onClick={() => this.props.addItem(this.state.value)} >Add</button>
             </div>
         )
