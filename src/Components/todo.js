@@ -13,8 +13,6 @@ export class Todo extends React.Component{
 
     addItem(item){
         const newitem={val:item,id:globeid++};
-        // this.state.data.push(newitem);
-        // this.setState({data : this.state.data});
         this.setState({data : [...this.state.data,newitem]});
 
     }
